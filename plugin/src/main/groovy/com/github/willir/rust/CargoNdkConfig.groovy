@@ -89,7 +89,7 @@ class CargoNdkConfig {
     }
 
     Path getRustLibOutPath(RustTargetType target, String libName) {
-        def targetDir = (profile == "dev") ? "debug" : profile;
+        def targetDir = (profile == "dev") ? "debug" : profile
         return Paths.get(
                 getRustTargetPath().toString(), target.rustTarget, targetDir, libName)
     }
